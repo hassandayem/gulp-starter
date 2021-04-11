@@ -1,0 +1,19 @@
+/*
+
+- Mobile: 375px
+- Desktop: 1440px
+
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 375px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+}
